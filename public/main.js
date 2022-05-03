@@ -2,7 +2,7 @@ console.log('main.js文件运行成功')
 
 getCSS.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/style.css')
+    request.open('GET', 'public/style.css')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
             const style = document.createElement('style');
@@ -15,7 +15,7 @@ getCSS.onclick = () => {
 
 getJS.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/2.js')
+    request.open('GET', 'public/2.js')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
             const script = document.createElement('script')
@@ -28,7 +28,7 @@ getJS.onclick = () => {
 
 getHTML.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/3.html')
+    request.open('GET', 'public/3.html')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
             const div = document.createElement('div')
@@ -41,7 +41,7 @@ getHTML.onclick = () => {
 
 getXML.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/4.xml')
+    request.open('GET', 'public/4.xml')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
             const dom = request.responseXML
@@ -54,7 +54,7 @@ getXML.onclick = () => {
 
 getJSON.onclick = () => {
     const request = new XMLHttpRequest()
-    request.open('GET', '/5.json')
+    request.open('GET', 'public/5.json')
     request.onreadystatechange = () => {
         if (request.readyState === 4 && request.status >= 200 && request.status < 300) {
             const object = JSON.parse(request.response)
